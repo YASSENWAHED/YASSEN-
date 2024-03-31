@@ -1,0 +1,225 @@
+
+<!doctype html>
+<html lang="ar">
+
+<head>
+    <meta name="description" content="هذا الموقع خاص لتنصيب البوته الجميله السا" />
+    <link rel="icon" type="image/jpg" href="https://telegra.ph/file/51db1c25288412f1b7718.jpg" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ELGAZAR INFO</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: #121212;
+            color: #ffffff;
+            font-family: Arial, sans-serif;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            box-sizing: border-box;
+        }
+
+        .background-image {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+        }
+
+        .background-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .profile {
+            margin-bottom: 20px;
+            animation: slideRight 1s ease-in-out;
+        }
+
+        .profile img {
+            width: 100%;
+            display: block;
+            margin: 0 auto 20px;
+        }
+
+        .bio {
+            text-align: center;
+            color: #ffffff;
+            background-color: rgba(0, 0, 0, 0.7);
+            border: 2px solid #000000;
+            /* تغيير لون الإطار إلى أسود */
+            padding: 10px;
+            animation: slideLeft 1s ease-in-out;
+        }
+
+        .contact-info {
+            text-align: center;
+        }
+
+        .platform {
+            margin-top: 20px;
+            animation: slideLeft 1s ease-in-out;
+        }
+
+        .platform ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        .platform ul li {
+            margin-bottom: 5px;
+        }
+
+        .platform ul li .rectangle-box {
+            width: 150px;
+            /* تغيير عرض المستطيل */
+            height: 50px;
+            /* تغيير ارتفاع المستطيل */
+            margin: 10px auto;
+            padding: 10px;
+            border: 2px solid transparent;
+            /* لجعل اللون شفاف */
+            border-radius: 10px;
+            cursor: pointer;
+            text-align: center;
+            background-color: rgba(0, 0, 0, 0.7);
+            /* تغيير اللون إلى شفاف */
+            animation: slideLeft 1s ease-in-out;
+        }
+
+        .platform ul li .rectangle-box:hover {
+            background-color: rgba(0, 0, 0, 0.9);
+            /* تغيير اللون إلى شفاف */
+        }
+
+        .platform ul li a {
+            color: #ffffff;
+            text-decoration: none;
+        }
+
+        .platform ul li a i {
+            font-size: 24px;
+            /* تكبير حجم الرمز */
+        }
+
+        .platform ul li a span {
+            font-size: 14px;
+            /* تكبير حجم النص */
+        }
+
+        .footer {
+            width: 100%;
+            padding: 10px 0;
+            text-align: center;
+        }
+
+        .footer img {
+            max-width: 100%;
+        }
+
+        @keyframes slideRight {
+            from {
+                opacity: 0;
+                transform: translateX(50px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+
+        .my-link {
+            text-decoration: none;
+            color: #000;
+        }
+
+        .my-link:hover {
+            text-decoration: underline;
+            color: rgb(0, 140, 255);
+        }
+
+        @keyframes slideLeft {
+            from {
+                opacity: 0;
+                transform: translateX(-50px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+
+    </style>
+</head>
+
+<body>
+    <div class="background-image">
+        <img src="https://telegra.ph/file/998f829db094d56847c5c.jpg" alt="صورة الخلفية">
+    </div>
+    <div class="container">
+        <div class="profile">
+            <img style=" border-radius: 25px;height: 600px;width: 600px;" src="https://telegra.ph/file/37b46cc106f667eb93ced.jpg" alt="صورة النبذة">
+            <div class="bio">
+                <p>مـرحـبـا بـك فـي مـوقـع تنـصـيـب بـوتـه الـسـا</p> <!-- تغيير نص النبذة -->
+            </div>
+        </div>
+        <hr>
+        <div class="contact-info">
+            <div class="platform">
+                <ul>
+                    <li>
+                        <div class="rectangle-box my-link my-link" style="background-color: rgba(0, 0, 0, 0.7);"> <a
+                                class="my-link" href="https://elsa-web.onrender.com/"><i class="fab fa-github"></i>
+                                <span>QR-CODE</span></a>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="rectangle-box my-link" style="background-color: rgba(0, 0, 0, 0.7);"> <a
+                                class="my-link" href="https://github.com/elsabot2/ELSA_BOT-V2"><i
+                                    class="fab fa-github"></i>
+                                <span>BOT SCRIPT</span></a>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="rectangle-box my-link" style="background-color: rgba(0, 0, 0, 0.7);"> <a
+                                class="my-link" class="my-link" href="https://github.com/Sjshskdhd"><i
+                                    class="fab fa-github"></i>
+                                <span>GITHUB</span></a>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="rectangle-box my-link" style="background-color: rgba(0, 0, 0, 0.7);"> <a
+                                class="my-link" href="https://wa.me/+201098906252"><i class="fab fa-whatsapp"></i>
+                                <span>MY</span></a>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="rectangle-box my-link" style="background-color: rgba(0, 0, 0, 0.7);"> <a
+                                class="my-link" href="https://chat.whatsapp.com/H7lNIia7rsaDcYSNWrtTGI"><i
+                                    class="fab fa-whatsapp"></i>
+                                <span>SUPPORT</span></a>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="footer">
+        <img src="https://telegra.ph/file/3a73d228cce0402c81bfb.png" alt="صورة النهاية">
+        <p style="color: #ffffff; font-size: 14px;background-color: rgba(0, 0, 0, 0.7);">الـحـقـوق محـفوظـه لـ الـجـزار 2024 ©</p>
+    </div>
+</body>
+
+</html>
