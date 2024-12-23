@@ -157,6 +157,18 @@
             <p>© 2024 حقوق النشر محفوظة</p>
         </div>
     </div>
+
+    <script>
+        // منع الضغط المطوّل ومنع قائمة السياق
+        document.querySelectorAll('a, img').forEach(element => {
+            element.addEventListener('contextmenu', e => e.preventDefault()); // منع قائمة السياق
+            element.addEventListener('mousedown', e => {
+                if (e.button === 2) { // إذا كان الزر الأيمن للماوس
+                    window.location.href = element.href || element.parentElement.href;
+                }
+            });
+        });
+    </script>
 </body>
 
 </html>
