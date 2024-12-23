@@ -118,27 +118,27 @@
             <ul>
                 <li>
                     <div class="rectangle-box">
-                        <a href="https://t.me/YA55EN0"><i class="fab fa-telegram"></i> Telegram</a>
+                        <a href="https://t.me/YA55EN0" class="link"><i class="fab fa-telegram"></i> Telegram</a>
                     </div>
                 </li>
                 <li>
                     <div class="rectangle-box">
-                        <a href="https://www.instagram.com/tocwon"><i class="fab fa-instagram"></i> Instagram</a>
+                        <a href="https://www.instagram.com/tocwon" class="link"><i class="fab fa-instagram"></i> Instagram</a>
                     </div>
                 </li>
                 <li>
                     <div class="rectangle-box">
-                        <a href="https://tiktok.com/@tocwon"><i class="fab fa-tiktok"></i> TikTok</a>
+                        <a href="https://tiktok.com/@tocwon" class="link"><i class="fab fa-tiktok"></i> TikTok</a>
                     </div>
                 </li>
                 <li>
                     <div class="rectangle-box">
-                        <a href="https://www.youtube.com/@YA55EN"><i class="fab fa-youtube"></i> YouTube</a>
+                        <a href="https://www.youtube.com/@YA55EN" class="link"><i class="fab fa-youtube"></i> YouTube</a>
                     </div>
                 </li>
                 <li>
                     <div class="rectangle-box">
-                        <a href="https://whatsapp.com/channel/0029VaMe7eCEAKWHyud72j2H"><i class="fab fa-whatsapp"></i> WhatsApp</a>
+                        <a href="https://whatsapp.com/channel/0029VaMe7eCEAKWHyud72j2H" class="link"><i class="fab fa-whatsapp"></i> WhatsApp</a>
                     </div>
                 </li>
             </ul>
@@ -147,6 +147,14 @@
             <p>© 2024 حقوق النشر محفوظة</p>
         </div>
     </div>
+
+    <script>
+        // منع الضغط المطول على الروابط
+        document.querySelectorAll('.link').forEach(link => {
+            link.addEventListener('contextmenu', e => e.preventDefault()); // منع قائمة السياق
+            link.addEventListener('mousedown', e => e.preventDefault()); // منع النقر المطول
+        });
+    </script>
 </body>
 
 </html>
