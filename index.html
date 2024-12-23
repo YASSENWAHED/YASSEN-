@@ -107,7 +107,7 @@
     </div>
     <div class="container">
         <div class="profile">
-            <a href="https://t.me/YA55EN" target="_blank">
+            <a href="https://t.me/YA55EN" target="_blank" class="image-link">
                 <img src="https://telegra.ph/file/895541580f56406caedbd.png" alt="YA55EN">
             </a>
         </div>
@@ -149,10 +149,10 @@
     </div>
 
     <script>
-        // منع الضغط المطول على الروابط
-        document.querySelectorAll('.link').forEach(link => {
-            link.addEventListener('contextmenu', e => e.preventDefault()); // منع قائمة السياق
-            link.addEventListener('mousedown', e => e.preventDefault()); // منع النقر المطول
+        // منع الضغط المطول على الروابط والصورة
+        document.querySelectorAll('.link, .image-link').forEach(element => {
+            element.addEventListener('contextmenu', e => e.preventDefault()); // منع قائمة السياق
+            element.addEventListener('mousedown', e => e.preventDefault()); // منع النقر المطول
         });
     </script>
 </body>
