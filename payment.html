@@ -110,6 +110,7 @@
         .payment-method code {
             color: #ffffff; /* لون أرقام الدفع (أبيض) */
             font-weight: bold;
+            cursor: pointer; /* تغيير المؤشر إلى يد عند التمرير فوق النص */
         }
 
         /* تصميم متجاوب للهواتف */
@@ -218,6 +219,18 @@
             });
             document.querySelector('.welcome-message').style.display = 'block';
         };
+
+        // نسخ النص عند النقر على عنصر <code>
+        document.querySelectorAll('.payment-method code').forEach(code => {
+            code.addEventListener('click', () => {
+                const textToCopy = code.innerText;
+                navigator.clipboard.writeText(textToCopy).then(() => {
+                    alert('تم نسخ النص: ' + textToCopy);
+                }).catch(err => {
+                    console.error('فشل في نسخ النص: ', err);
+                });
+            });
+        });
     </script>
 </body>
 </html>
