@@ -108,6 +108,27 @@
             background: #555;
         }
 
+        /* رسالة النسخ */
+        .copy-notification {
+            position: fixed;
+            bottom: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: #1e90ff;
+            color: #fff;
+            padding: 10px 20px;
+            border-radius: 5px;
+            font-size: 0.9rem;
+            opacity: 0;
+            visibility: hidden;
+            transition: opacity 0.3s ease, visibility 0.3s ease;
+        }
+
+        .copy-notification.show {
+            opacity: 1;
+            visibility: visible;
+        }
+
         /* تصميم متجاوب */
         @media (max-width: 600px) {
             .buttons {
@@ -116,6 +137,11 @@
 
             .buttons button {
                 width: 100%;
+            }
+
+            .copy-notification {
+                width: 90%;
+                text-align: center;
             }
         }
     </style>
@@ -156,6 +182,9 @@
         </div>
     </div>
 
+    <!-- رسالة النسخ -->
+    <div id="copyNotification" class="copy-notification">تم النسخ بنجاح!</div>
+
     <script>
         // إظهار قسم الدفع المحدد
         function showMethod(method) {
@@ -165,10 +194,14 @@
             document.getElementById(method).classList.add('active');
         }
 
-        // نسخ النص
+        // نسخ النص وإظهار الرسالة
         function copyText(text) {
             navigator.clipboard.writeText(text).then(() => {
-                alert('تم نسخ النص: ' + text);
+                const notification = document.getElementById('copyNotification');
+                notification.classList.add('show');
+                setTimeout(() => {
+                    notification.classList.remove('show');
+                }, 3000); // إخفاء الرسالة بعد 3 ثواني
             }).catch(err => {
                 console.error('فشل في نسخ النص: ', err);
             });
