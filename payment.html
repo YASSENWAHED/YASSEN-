@@ -146,7 +146,7 @@
 <body>
     <!-- الخلفية -->
     <div class="background-image">
-        <img src="https://g.top4top.io/p_3333ecexq1.jpg" alt="YA55EN">
+        <img src="https://g.top4top.io/p_3333ecexq1.jpg" alt="YA55EN" loading="lazy">
     </div>
 
     <!-- محتوى صفحة الدفع -->
@@ -227,7 +227,21 @@
             code.addEventListener('click', () => {
                 const textToCopy = code.innerText;
                 navigator.clipboard.writeText(textToCopy).then(() => {
-                    alert('تم نسخ النص: ' + textToCopy);
+                    const notification = document.createElement('div');
+                    notification.textContent = 'تم نسخ النص: ' + textToCopy;
+                    notification.style.position = 'fixed';
+                    notification.style.bottom = '20px';
+                    notification.style.left = '50%';
+                    notification.style.transform = 'translateX(-50%)';
+                    notification.style.backgroundColor = '#1e90ff';
+                    notification.style.color = '#ffffff';
+                    notification.style.padding = '10px 20px';
+                    notification.style.borderRadius = '5px';
+                    notification.style.zIndex = '1000';
+                    document.body.appendChild(notification);
+                    setTimeout(() => {
+                        document.body.removeChild(notification);
+                    }, 3000);
                 }).catch(err => {
                     console.error('فشل في نسخ النص: ', err);
                 });
