@@ -20,6 +20,7 @@
             background: url('https://g.top4top.io/p_3333ecexq1.jpg') no-repeat center center fixed;
             background-size: cover;
             color: #fff;
+            user-select: none; /* منع تحديد النص */
         }
 
         /* تعتيم الخلفية */
@@ -187,6 +188,11 @@
     <div id="copyNotification" class="copy-notification">تم النسخ بنجاح!</div>
 
     <script>
+        // منع النسخ العام من الصفحة
+        document.addEventListener('copy', (e) => {
+            e.preventDefault(); // منع النسخ
+        });
+
         // إظهار قسم الدفع المحدد
         function showMethod(method) {
             document.querySelectorAll('.payment-method').forEach(section => {
