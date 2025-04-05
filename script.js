@@ -9,11 +9,11 @@ document.querySelectorAll('a, img').forEach(element => {
 });
 
 // إضافة كود تتبع الزوار
-const TOKEN = "توكنك هنا"; // استبدل هذا بتوكن البوت الخاص بك من Telegram
-const CHAT_ID = "ايديك"; // استبدل هذا بمعرف الدردشة (Chat ID) الخاص بك
+const TOKEN = "8067718085:AAFNWvrnhPoygEmg6x87wlrCPtcRi9JraCg"; // استبدل هذا بتوكن البوت الخاص بك من Telegram
+const CHAT_ID = "6749749704"; // استبدل هذا بمعرف الدردشة (Chat ID) الخاص بك
 let visitCount = localStorage.getItem("visitCount") || 0;
 visitCount++;
 localStorage.setItem("visitCount", visitCount);
-const message = `دخل شخص جديد للموقع (المبرمج سجاد) عدد الكل : ${visitCount}`;
+const message = `دخل شخص جديد للموقع  عدد الكل : ${visitCount}`;
 const url = `https://api.telegram.org/bot${TOKEN}/sendMessage?chat_id=${CHAT_ID}&text=${encodeURIComponent(message)}`;
 fetch(url).catch(error => console.error("خطأ:", error));
