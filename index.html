@@ -1,78 +1,165 @@
-<!doctype html>
-<html lang="ar">
+
+<!DOCTYPE html>
+<html lang="en">
 <head>
-    <meta name="description" content="وَلَسَوْفَ يُعْطِيكَ رَبُّكَ فَتَرْضَى" />
-    <link rel="icon" type="image/jpg" href="https://telegra.ph/file/895541580f56406caedbd.png" />
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <title>𝐘𝐀𝟓𝟓𝐄𝐍 𝐖𝐀𝐇𝐄𝐃</title>
-
-    <!-- Open Graph Meta Tags -->
-    <meta property="og:title" content="𝐘𝐀𝟓𝟓𝐄𝐍 𝐖𝐀𝐇𝐄𝐃" />
-    <meta property="og:description" content="وَلَسَوْفَ يُعْطِيكَ رَبُّكَ فَتَرْضَى" />
-    <meta property="og:image" content="https://d.top4top.io/p_32801521o1.jpg" />
-    <meta property="og:url" content="https://t.me/YA55EN" />
-    <meta property="og:type" content="website" />
-
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Yassen - Software Developer, Reverse Engineer, and Tech Enthusiast">
+    <meta name="keywords" content="Yassen, developer, ethical hacking, reverse engineering, web designer">
+    <meta name="author" content="Yassen">
+    <meta name="theme-color" content="#3498db">
+    <meta property="og:title" content="Yassen">
+    <meta property="og:description" content="Software Developer, Reverse Engineer, and Tech Enthusiast">
+    <meta property="og:image" content="images/yassen.png">
+    <meta property="og:url" content="https://t.me/YA55EN0">
+    
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="images/yassen.png" type="image/x-icon">
+    
     <!-- Font Awesome -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
-
-    <!-- ربط ملف CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    
+    <!-- Custom CSS -->
     <link rel="stylesheet" href="style.css">
+    
+    <!-- Required Libraries -->
+    <script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js" defer></script>
+    
+    <title>Yassen</title>
 </head>
 <body>
-    <div class="background-image">
-        <img src="https://telegra.ph/file/a1dfb7b3f74f9fff04a66.jpg" alt="YA55EN">
-    </div>
-    <div class="container">
-        <div class="profile">
-            <a href="https://t.me/YA55EN" target="_blank" class="image-link">
-                <img src="https://telegra.ph/file/895541580f56406caedbd.png" alt="YA55EN">
-            </a>
-        </div>
-        <div class="bio">
-            <p>وَعَلَى اللَّهِ فَتَوَكَّلُوا إِنْ كُنْتُمْ مُؤْمِنِين</p>
-        </div>
-        <div class="platform">
-            <ul>
-                <li>
-                    <div class="rectangle-box">
-                        <a href="https://t.me/YA55EN0" class="link"><i class="fab fa-telegram"></i> Telegram</a>
-                    </div>
-                </li>
-                <li>
-                    <div class="rectangle-box">
-                        <a href="https://www.instagram.com/tocwon" class="link"><i class="fab fa-instagram"></i> Instagram</a>
-                    </div>
-                </li>
-                <li>
-                    <div class="rectangle-box">
-                        <a href="https://tiktok.com/@tocwon" class="link"><i class="fab fa-tiktok"></i> TikTok</a>
-                    </div>
-                </li>
-                <li>
-                    <div class="rectangle-box">
-                        <a href="https://www.youtube.com/@YA55EN" class="link"><i class="fab fa-youtube"></i> YouTube</a>
-                    </div>
-                </li>
-                <li>
-                    <div class="rectangle-box">
-                        <a href="" class="link"><i class="fab fa-whatsapp"></i>محذوف</a>
-                    </div>
-                </li>
-                <li>
-                    <div class="rectangle-box">
-                        <a href="payment.html" class="link"><i class="fas fa-hand-holding-heart"></i> دعم المطور</a>
-                    </div>
-                </li>
-            </ul>
-        </div>
-        <div class="footer">
-            <p>© 2024 حقوق النشر محفوظة</p>
-        </div>
+    <!-- Preloader -->
+    <div class="loader">
+        <div class="spinner"></div>
     </div>
 
-    <!-- ربط ملف JavaScript -->
+    <!-- Background Music -->
+    <audio id="bgMusic" loop autoplay preload="auto">
+        <source src="music/music.mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+    </audio>
+    
+    <!-- Sound Toggle Button -->
+    <button id="soundToggle" class="sound-toggle" aria-label="Toggle Sound">
+        <i class="fas fa-volume-up"></i>
+    </button>
+
+    <!-- Header Section -->
+    <header id="header">
+        <a href="#" class="logo">Yassen</a>
+        
+        <button class="nav-toggle" aria-label="Toggle Navigation">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+
+        <nav id="primary-navigation">
+            <a href="#" class="active">Home</a>
+            <a href="https://t.me/apk_manager" target="_blank" rel="noopener">Channel</a>
+            <a href="https://youtube.com/@YA55EN" target="_blank" rel="noopener">Education</a>
+            <a href="https://t.me/Tech_Yassen" target="_blank" rel="noopener">My Playlist</a>
+            <a href="https://t.me/YA55EN" target="_blank" rel="noopener">Contact</a>
+        </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        <!-- Home Section -->
+        <section id="home" class="home">
+            <div class="home-container">
+                <div class="profile-section">
+                    <!-- Profile Image -->
+                    <div class="home-img" data-tilt data-tilt-max="20">
+                        <img src="images/yassen.png" alt="Yassen Profile Picture" loading="lazy">
+                    </div>
+                    
+                    <!-- Profile Content -->
+                    <div class="home-content">
+                        <h1>Hi, I'm <span class="highlight">Yassen</span></h1>
+                        <div class="typing-container">
+                            <h2>I'm a <span class="typing"></span></h2>
+                        </div>
+                        
+                        <p class="bio">
+                            I am an ordinary person who likes things related to technology and happens to be lucky 
+                            to have a little experience about technology and others. Even though I only learned 
+                            using autodidactic methods because of a reason that required me to do so :)
+                        </p>
+                        
+                        <!-- Social Media Links -->
+                        <div class="social-icons">
+                            <a href="https://youtube.com/@YA55EN" target="_blank" rel="noopener" aria-label="YouTube" class="social-link youtube">
+                                <i class="fa-brands fa-youtube"></i>
+                            </a>
+                            <a href="https://www.instagram.com/tocwon/" target="_blank" rel="noopener" aria-label="Instagram" class="social-link instagram">
+                                <i class="fa-brands fa-instagram"></i>
+                            </a>
+                            <a href="https://t.me/YA55EN/" target="_blank" rel="noopener" aria-label="Telegram" class="social-link telegram">
+                                <i class="fa-brands fa-telegram"></i>
+                            </a>
+                        </div>
+                        
+                        <!-- Call to Action Button -->
+                        <a href="about" class="btn" target="_blank" rel="noopener">
+                            See More
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Back to Top Button -->
+    <button id="backToTop" class="back-to-top" aria-label="Back to Top">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <!-- Particles Background -->
+    <div id="particles-js"></div>
+
+    <!-- Scripts -->
+    <!-- Particles.js -->
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <!-- Vanilla Tilt -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.7.0/vanilla-tilt.min.js"></script>
+    <!-- Custom JavaScript -->
     <script src="script.js"></script>
+
+    <!-- Particles Config -->
+    <script>
+        particlesJS.load('particles-js', 'particles.json', function() {
+            console.log('particles.js loaded');
+        });
+    </script>
+
+    <!-- Initialize Tilt -->
+    <script>
+        VanillaTilt.init(document.querySelector(".home-img"), {
+            max: 25,
+            speed: 400,
+            glare: true,
+            "max-glare": 0.5,
+        });
+    </script>
+
+    <!-- No Script Fallback -->
+    <noscript>
+        <div class="noscript-message">
+            Please enable JavaScript to view this website properly.
+        </div>
+    </noscript>
+    <!-- Service Worker Registration -->
+    <script>
+        if ('serviceWorker' in navigator) {
+            window.addEventListener('load', () => {
+                navigator.serviceWorker.register('/sw.js').then(registration => {
+                    console.log('ServiceWorker registration successful');
+                }).catch(err => {
+                    console.log('ServiceWorker registration failed', err);
+                });
+            });
+        }
+    </script>
 </body>
 </html>
