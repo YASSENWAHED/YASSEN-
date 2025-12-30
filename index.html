@@ -5,183 +5,191 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Yassen Wahed</title>
 
-<!-- Open Graph / Facebook -->
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://yassen.netlify.app">
 <meta property="og:title" content="Yassen Wahed">
 <meta property="og:description" content="Welcome To World Yassen">
 <meta property="og:image" content="https://i.top4top.io/p_3650e5od01.jpg">
 
-<!-- Twitter -->
-<meta property="twitter:card" content="summary_large_image">
-<meta property="twitter:url" content="https://yourwebsite.com/">
-<meta property="twitter:title" content="Yassen Wahed">
-<meta property="twitter:description" content="Welcome To World Yassen">
-<meta property="twitter:image" content="https://yourwebsite.com/image.jpg">
-
 <link href="https://fonts.googleapis.com/css2?family=Changa:wght@600;700;800&display=swap" rel="stylesheet">
 
 <style>
-*{box-sizing:border-box;margin:0;padding:0;}
+*{box-sizing:border-box;margin:0;padding:0}
+
 body{
-  font-family:'Changa', Tahoma, Arial, sans-serif;
+  font-family:'Changa',Tahoma,Arial,sans-serif;
   min-height:100vh;
-  text-align:center;
   background:#000;
   color:#fff;
+  text-align:center;
 }
+
 .video-bg{
   position:fixed;
   inset:0;
-  object-fit:cover;
-  z-index:-2;
   width:100%;
   height:100%;
+  object-fit:cover;
+  z-index:-2;
 }
 .overlay{
   position:fixed;
   inset:0;
-  background:rgba(0,0,0,.45);
+  background:rgba(0,0,0,.5);
   z-index:-1;
 }
+
+/* Fade هادئ */
 .container{
   max-width:420px;
   margin:auto;
   padding:20px;
+  animation:fade 1.2s ease forwards;
 }
+@keyframes fade{
+  from{opacity:0;transform:translateY(15px)}
+  to{opacity:1;transform:translateY(0)}
+}
+
 .avatar{
-  width:100px;
-  height:100px;
+  width:95px;
+  height:95px;
   border-radius:50%;
-  border:3px solid #000;
   margin-top:20px;
   object-fit:cover;
 }
+
+h1{
+  margin-top:10px;
+  text-shadow:0 2px 10px rgba(0,0,0,.8);
+}
+
 .subtitle{
-  color:#ccc;
   font-size:14px;
-  margin-bottom:20px;
+  color:#ccc;
+  margin-bottom:25px;
 }
+
 .btn{
-  display:flex;
-  justify-content:center;
-  align-items:center;
-  background:rgba(0,0,0,.25);
+  position:relative;
+  display:block;
+  padding:14px;
+  margin:12px 0;
+  border-radius:22px;
+  background:rgba(255,255,255,.08);
+  backdrop-filter: blur(6px);
   color:#fff;
-  padding:12px;
-  margin:10px 0;
-  border-radius:30px;
-  border:1px solid #fff;
   text-decoration:none;
-  transition:.2s;
+  overflow:hidden;
 }
-.btn:hover{
-  background:rgba(255,255,255,.1);
+
+.btn::after{
+  content:'';
+  position:absolute;
+  bottom:8px;
+  left:25%;
+  width:0;
+  height:1px;
+  background:#fff;
+  transition:.3s;
 }
-/* زر الموسيقى */
+.btn:hover::after{
+  width:50%;
+}
+
 .music-btn{
   position:fixed;
   top:15px;
   right:15px;
-  width:35px;
-  height:35px;
-  background:#000;
+  width:34px;
+  height:34px;
+  background:rgba(0,0,0,.7);
   border-radius:50%;
   display:flex;
   align-items:center;
   justify-content:center;
   cursor:pointer;
   z-index:999;
-  box-shadow:0 0 8px rgba(0,0,0,.7);
-  transition:.3s;
 }
-.music-btn span{
-  color:#fff;
-  font-size:16px;
+.music-btn.playing{
+  animation:pulse 1.4s infinite;
 }
-.music-btn:hover{
-  transform:scale(1.1);
+@keyframes pulse{
+  0%{box-shadow:0 0 0 0 rgba(255,255,255,.4)}
+  70%{box-shadow:0 0 0 10px rgba(255,255,255,0)}
+  100%{box-shadow:0 0 0 0 rgba(255,255,255,0)}
 }
 
-/* Responsive */
+
+footer{
+  margin-top:30px;
+  font-size:12px;
+  color:#aaa;
+}
+
 @media(max-width:480px){
-  .container{
-    padding:15px;
-  }
-  .avatar{
-    width:80px;
-    height:80px;
-  }
-  .btn{
-    padding:10px;
-    font-size:14px;
-  }
-  .music-btn{
-    width:30px;
-    height:30px;
-  }
-  .music-btn span{
-    font-size:14px;
-  }
+  .avatar{width:80px;height:80px}
+  .btn{font-size:14px}
 }
 </style>
 </head>
+
 <body>
 
-<!-- زر تشغيل الموسيقى العلوي -->
-<div class="music-btn" id="musicBtn" onclick="toggleQuran()" aria-label="زر تشغيل/إيقاف القرآن">
-  <span>🔇</span>
-</div>
+<div class="music-btn" id="musicBtn"><span>🔇</span></div>
 
 <video class="video-bg" autoplay muted loop playsinline>
   <source src="video.mp4" type="video/mp4">
-  متصفحك لا يدعم الفيديو
 </video>
 <div class="overlay"></div>
 
 <div class="container">
-  <img src="image.jpg" class="avatar" alt="Avatar">
+  <img src="image.jpg" class="avatar">
   <h1>Yassen Wahed</h1>
   <div class="subtitle">Welcome To World Yassen</div>
 
   <a href="https://t.me/y_c_o" class="btn">My account</a>
   <a href="https://t.me/tech_yassen" class="btn">My channel</a>
   <a href="https://t.me/vquranv" class="btn">Quran</a>
-  <a href="https://t.me/zz_es" class="btn">Mu trust</a>
+  <a href="https://t.me/zz_es" class="btn">My trust</a>
+
+  <footer>© 2025 Yassen Wahed</footer>
 </div>
 
-<audio id="audio" preload="none"></audio>
+<audio id="audio"></audio>
 
 <script>
 const audio = document.getElementById("audio");
 const musicBtn = document.getElementById("musicBtn");
+const icon = musicBtn.querySelector("span");
+const stream = "https://qurango.net/radio/saud_alshuraim";
 let playing = false;
 
-const quranStream = "https://qurango.net/radio/saud_alshuraim";
-
-function toggleQuran(){
+function playAudio(){
   if(!playing){
-    audio.src = quranStream;
-    audio.play().catch(()=>{});
-    playing = true;
-    musicBtn.querySelector("span").textContent = "🔊";
-  } else {
-    audio.pause();
-    playing = false;
-    musicBtn.querySelector("span").textContent = "🔇";
+    audio.src = stream;
+    audio.volume = 0.6;
+    audio.play().then(()=>{
+      playing = true;
+      icon.textContent = "🔊";
+      musicBtn.classList.add("playing");
+    }).catch(()=>{});
   }
 }
 
-audio.addEventListener('pause', ()=>{ 
+musicBtn.addEventListener("click",(e)=>{
+  e.stopPropagation();
   if(playing){
-    musicBtn.querySelector("span").textContent = "🔇";
-    playing = false;
+    audio.pause();
+    playing=false;
+    icon.textContent="🔇";
+    musicBtn.classList.remove("playing");
+  }else{
+    playAudio();
   }
 });
 
-window.addEventListener('load', () => {
-  musicBtn.querySelector("span").textContent = "🔇";
-});
+document.addEventListener("click", playAudio, { once:true });
 </script>
 
 </body>
